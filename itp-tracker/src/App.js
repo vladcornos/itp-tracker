@@ -58,9 +58,10 @@ export default function App() {
     } else setMsg("Eroare: " + error.message);
   }
 
-  async function deleteVehicle(id) {
+ async function deleteVehicle(id) {
     if (!window.confirm("Ești sigur că vrei să ștergi acest vehicul?")) return;
-    await supabase.from("vehicles").delete().eq("id", id);
+    const { error } = await supabase.from("vehicles").delete().eq("id", Number(id));
+    if (error) { alert("Eroare: " + error.message); return; }
     fetchVehicles();
   }
 
