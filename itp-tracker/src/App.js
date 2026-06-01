@@ -152,7 +152,7 @@ export default function App() {
                   }}>
                   <div style={{ fontSize: 20, marginBottom: 4 }}>{opt.icon}</div>
                   <div style={{ fontWeight: 700, fontSize: 14 }}>{opt.label}</div>
-                  <div style={{ fontSize: 10, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>{opt.desc}</div>
+      
                 </button>
               ))}
             </div>
